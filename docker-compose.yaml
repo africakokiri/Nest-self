@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:15
+    restart: always
+    volumes:
+      - './DB:/var/lib/postgresql/data'
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: kokiri
+      POSTGRES_PASSWORD: kokiri
+      POSTGRES_DB: kokiri
